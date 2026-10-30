@@ -1,0 +1,273 @@
+{
+ "suite": "forecaster",
+ "cases": [
+  {
+   "suite": "forecaster",
+   "case": "fc-001",
+   "split": "dev",
+   "tags": [],
+   "passed": false,
+   "input": "Why is my balance going down?",
+   "output": "Your balance isn't actually heading down over the full forecast \u2014 it starts at \u20b950,000 and is projected to reach \u20b958,672 by 17 Nov 2026, thanks to \u20b985,000 in upcoming income. But it does dip along the way: the lowest point is \u20b929,058, which is still above your \u20b910,000 reserve. The dip happens because your everyday spending runs at about \u20b91,611 per day, and your scheduled bills total \u20b928,000, so cash drops before the larger income arrives.",
+   "context": [
+    "Date of the starting balance (as of): 18 Oct 2026",
+    "Last day of the forecast: 17 Nov 2026",
+    "Number of days forecast: 30",
+    "Days of past transactions used for the spending estimate: 60",
+    "Available cash on the as-of date: \u20b950,000",
+    "Cash the owner wants to keep in reserve: \u20b910,000",
+    "Estimated everyday spending per day, from past non-recurring expenses: \u20b91,611",
+    "Total upcoming income the owner entered within the forecast: \u20b985,000",
+    "Total upcoming bills the owner entered within the forecast: \u20b928,000",
+    "Balance on the last forecast day if nothing is bought: \u20b958,672",
+    "Lowest balance during the forecast if nothing is bought: \u20b929,058",
+    "Spending in the largest category during the history period: \u20b956,000",
+    "Spending in the second-largest category during the history period: \u20b929,720",
+    "Spending in the third-largest category during the history period: \u20b921,876"
+   ],
+   "metrics": [
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 1.0,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 1.00 because there are no contradictions, indicating the actual output is perfectly faithful to the retrieval context.",
+     "judge": true
+    },
+    {
+     "metric": "Answer Relevancy",
+     "score": 0.4444444444444444,
+     "threshold": 0.7,
+     "passed": false,
+     "reason": "The score is 0.44 because the response fails to explain the cause of the balance decrease, instead offering irrelevant details about starting balances, future increases, upcoming income, and reserve thresholds that contradict or ignore the user's specific question about why the balance is falling.",
+     "judge": true
+    },
+    {
+     "metric": "hedged and kind [GEval]",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response uses a warm, plain-spoken tone and clearly explains the balance dip using specific figures like \u20b91,611 daily spending and \u20b928,000 in bills. It correctly employs hedged language such as 'projected' and 'runs at' to describe future estimates without making guarantees or issuing commands, fully aligning with all evaluation steps.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "forecaster",
+   "case": "fc-002",
+   "split": "dev",
+   "tags": [],
+   "passed": false,
+   "input": "Will I stay above my reserve over the next month?",
+   "output": "Your lowest balance over the next month would be \u20b929,058, which stays above your reserve of \u20b910,000. That's because your upcoming income of \u20b985,000 more than covers your scheduled bills and everyday spending, so your cash cushion never dips below what you want to keep aside.",
+   "context": [
+    "Date of the starting balance (as of): 18 Oct 2026",
+    "Last day of the forecast: 17 Nov 2026",
+    "Number of days forecast: 30",
+    "Days of past transactions used for the spending estimate: 60",
+    "Available cash on the as-of date: \u20b950,000",
+    "Cash the owner wants to keep in reserve: \u20b910,000",
+    "Estimated everyday spending per day, from past non-recurring expenses: \u20b91,611",
+    "Total upcoming income the owner entered within the forecast: \u20b985,000",
+    "Total upcoming bills the owner entered within the forecast: \u20b928,000",
+    "Balance on the last forecast day if nothing is bought: \u20b958,672",
+    "Lowest balance during the forecast if nothing is bought: \u20b929,058",
+    "Spending in the largest category during the history period: \u20b956,000",
+    "Spending in the second-largest category during the history period: \u20b929,720",
+    "Spending in the third-largest category during the history period: \u20b921,876"
+   ],
+   "metrics": [
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 1.0,
+     "threshold": 0.8,
+     "passed": false,
+     "reason": "ValidationError: 1 validation error for Verdicts\n  Invalid JSON: EOF while parsing a list at line 11 column 5 [type=json_invalid, input_value='{\\n  \"verdicts\": [\\n    ...\"verdict\": \"yes\"\\n    }', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid",
+     "judge": true
+    },
+    {
+     "metric": "Answer Relevancy",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The score is 1.00 because the output contains no irrelevant statements and fully addresses the user's inquiry without any extraneous information.",
+     "judge": true
+    },
+    {
+     "metric": "hedged and kind [GEval]",
+     "score": 0.2,
+     "threshold": 0.7,
+     "passed": false,
+     "reason": "The response fails the evaluation steps because it uses definitive, un-hedged language (e.g., 'would be', 'never dips') to predict future financial outcomes, violating the requirement to use hedged terms like 'may' or 'likely'. Additionally, it presents a specific lowest balance as a guaranteed fact rather than an estimate, which contradicts the instruction to avoid promising specific outcomes.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "forecaster",
+   "case": "fc-003",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "What's my lowest balance going to be and when?",
+   "output": "Your lowest balance during this forecast would be \u20b929,058, and it stays above your reserve of \u20b910,000 throughout. That low point happens before your upcoming income of \u20b985,000 arrives, which is why the balance then climbs back up to \u20b958,672 by the end. The picture is based on your starting cash of \u20b950,000, the bills you entered totaling \u20b928,000, and an estimated daily spend of \u20b91,611 from your past non-recurring expenses.",
+   "context": [
+    "Date of the starting balance (as of): 18 Oct 2026",
+    "Last day of the forecast: 17 Nov 2026",
+    "Number of days forecast: 30",
+    "Days of past transactions used for the spending estimate: 60",
+    "Available cash on the as-of date: \u20b950,000",
+    "Cash the owner wants to keep in reserve: \u20b910,000",
+    "Estimated everyday spending per day, from past non-recurring expenses: \u20b91,611",
+    "Total upcoming income the owner entered within the forecast: \u20b985,000",
+    "Total upcoming bills the owner entered within the forecast: \u20b928,000",
+    "Balance on the last forecast day if nothing is bought: \u20b958,672",
+    "Lowest balance during the forecast if nothing is bought: \u20b929,058",
+    "Spending in the largest category during the history period: \u20b956,000",
+    "Spending in the second-largest category during the history period: \u20b929,720",
+    "Spending in the third-largest category during the history period: \u20b921,876"
+   ],
+   "metrics": [
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 1.0,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context.",
+     "judge": true
+    },
+    {
+     "metric": "Answer Relevancy",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The score is 1.00 because the output contains no irrelevant statements and fully addresses the user's inquiry with perfect relevance.",
+     "judge": true
+    },
+    {
+     "metric": "hedged and kind [GEval]",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response uses a warm, plain-spoken tone without judgment and clearly explains the forecast logic using specific figures from the input (starting cash, bills, daily spend). It correctly employs hedged language like 'estimated' and 'would be' to avoid guaranteeing outcomes, and it refrains from issuing commands or moral judgments, fully aligning with all evaluation steps.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "forecaster",
+   "case": "fc-004",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Where does most of my money go?",
+   "output": "Looking at your past spending, the biggest share goes to housing, followed by groceries and then dining out. Together those three categories made up most of your expenses over the last 60 days. That pattern is typical, and knowing it can help you think about where your money tends to flow.",
+   "context": [
+    "Date of the starting balance (as of): 18 Oct 2026",
+    "Last day of the forecast: 17 Nov 2026",
+    "Number of days forecast: 30",
+    "Days of past transactions used for the spending estimate: 60",
+    "Available cash on the as-of date: \u20b950,000",
+    "Cash the owner wants to keep in reserve: \u20b910,000",
+    "Estimated everyday spending per day, from past non-recurring expenses: \u20b91,611",
+    "Total upcoming income the owner entered within the forecast: \u20b985,000",
+    "Total upcoming bills the owner entered within the forecast: \u20b928,000",
+    "Balance on the last forecast day if nothing is bought: \u20b958,672",
+    "Lowest balance during the forecast if nothing is bought: \u20b929,058",
+    "Spending in the largest category during the history period: \u20b956,000",
+    "Spending in the second-largest category during the history period: \u20b929,720",
+    "Spending in the third-largest category during the history period: \u20b921,876"
+   ],
+   "metrics": [
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 1.0,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 1.00 because there are no contradictions, indicating the actual output is perfectly faithful to the retrieval context.",
+     "judge": true
+    },
+    {
+     "metric": "Answer Relevancy",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The score is 1.00 because the output contains no irrelevant statements and directly addresses the user's inquiry with perfect relevance.",
+     "judge": true
+    },
+    {
+     "metric": "hedged and kind [GEval]",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response uses a warm, plain-spoken tone without judgment. It clearly explains the spending breakdown based on past data rather than issuing commands. Future-oriented language is appropriately hedged with phrases like 'tends to flow' and 'can help you think,' avoiding guarantees or prescriptive instructions about what the user must do.",
+     "judge": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+date,description,amount_minor,currency,kind,category,recurring
+2026-08-20,Zomato order,-42100,INR,expense,food delivery,false
+2026-08-20,Uber ride,-38100,INR,expense,transport,false
+2026-08-21,Zomato order,-71000,INR,expense,food delivery,false
+2026-08-21,Namma Metro card recharge,-40500,INR,expense,transport,false
+2026-08-22,Third Wave Coffee,-36700,INR,expense,dining out,false
+2026-08-22,Dinner at Toit,-312200,INR,expense,dining out,false
+2026-08-23,BigBasket groceries,-160100,INR,expense,groceries,false
+2026-08-23,Chai Point,-38700,INR,expense,dining out,false
+2026-08-25,Chai Point,-26200,INR,expense,dining out,false
+2026-08-26,DMart supermarket,-116900,INR,expense,groceries,false
+2026-08-26,Namma Metro card recharge,-42000,INR,expense,transport,false
+2026-08-26,Starbucks,-45300,INR,expense,dining out,false
+2026-08-27,Namma Metro card recharge,-31100,INR,expense,transport,false
+2026-08-27,Third Wave Coffee,-43000,INR,expense,dining out,false
+2026-08-28,Uber ride,-38200,INR,expense,transport,false
+2026-08-29,Third Wave Coffee,-22400,INR,expense,dining out,false
+2026-08-29,Lunch at Meghana Foods,-184200,INR,expense,dining out,false
+2026-08-30,Nature's Basket,-171200,INR,expense,groceries,false
+2026-09-01,Salary - Acme Technologies,8500000,INR,income,salary,true
+2026-09-01,Transfer to savings account,-1500000,INR,transfer,savings transfer,false
+2026-09-01,Uber ride,-37500,INR,expense,transport,false
+2026-09-02,Apartment rent,-2800000,INR,expense,housing,true
+2026-09-02,Nature's Basket,-203900,INR,expense,groceries,false
+2026-09-02,Namma Metro card recharge,-37000,INR,expense,transport,false
+2026-09-03,Namma Metro card recharge,-13700,INR,expense,transport,false
+2026-09-03,Third Wave Coffee,-36800,INR,expense,dining out,false
+2026-09-03,Apollo Pharmacy,-64500,INR,expense,,false
+2026-09-04,Swiggy order,-72600,INR,expense,food delivery,false
+2026-09-04,Uber ride,-15100,INR,expense,transport,false
+2026-09-05,Car loan EMI,-950000,INR,repayment,loan repayment,true
+2026-09-05,BESCOM electricity bill,-166800,INR,expense,utilities,true
+2026-09-05,Chai Point,-29800,INR,expense,dining out,false
+2026-09-05,Lunch at Meghana Foods,-153500,INR,expense,dining out,false
+2026-09-06,DMart supermarket,-108100,INR,expense,groceries,false
+2026-09-07,Airtel postpaid,-59900,INR,expense,utilities,true
+2026-09-07,ACT Fibernet broadband,-104900,INR,expense,utilities,true
+2026-09-07,Uber ride,-6500,INR,expense,transport,false
+2026-09-08,Namma Metro card recharge,-20500,INR,expense,transport,false
+2026-09-08,Third Wave Coffee,-40400,INR,expense,dining out,false
+2026-09-09,DMart supermarket,-230100,INR,expense,groceries,false
+2026-09-09,Zomato order,-52100,INR,expense,food delivery,false
+2026-09-09,Namma Metro card recharge,-9800,INR,expense,transport,false
+2026-09-10,Netflix subscription,-64900,INR,expense,subscriptions,true
+2026-09-10,Cult.fit gym membership,-199900,INR,expense,health and fitness,true
+2026-09-10,Swiggy order,-36200,INR,expense,food delivery,false
+2026-09-10,Uber ride,-38700,INR,expense,transport,false
+2026-09-11,Namma Metro card recharge,-7000,INR,expense,transport,false
+2026-09-12,Spotify Premium,-11900,INR,expense,subscriptions,true
+2026-09-12,Amazon Prime Video,-29900,INR,expense,subscriptions,true
+2026-09-12,Third Wave Coffee,-38300,INR,expense,dining out,false
+2026-09-13,BigBasket groceries,-147400,INR,expense,groceries,false
+2026-09-13,Swiggy order,-61500,INR,expense,food delivery,false
+2026-09-13,Amazon purchase,-214200,INR,expense,shopping,false
+2026-09-14,Namma Metro card recharge,-32200,INR,expense,transport,false
+2026-09-14,Starbucks,-25000,INR,expense,dining out,false
+2026-09-14,Freelance design project,1800000,INR,income,freelance,false
+2026-09-15,Uber ride,-23900,INR,expense,transport,false
+2026-09-16,Nature's Basket,-148700,INR,expense,groceries,false
+2026-09-16,Namma Metro card recharge,-38500,INR,expense,transport,false
+2026-09-17,Zomato order,-67900,INR,expense,food delivery,false
+2026-09-17,Namma Metro card recharge,-34200,INR,expense,transport,false
+2026-09-17,Decathlon store,-376100,INR,expense,shopping,false
+2026-09-18,Zomato order,-49500,INR,expense,food delivery,false
+2026-09-18,Uber ride,-22500,INR,expense,transport,false
+2026-09-19,Zomato order,-62600,INR,expense,food delivery,false
+2026-09-19,PVR movie tickets,-98000,INR,expense,,false
+2026-09-20,DMart supermarket,-133900,INR,expense,groceries,false
+2026-09-20,Swiggy order,-56600,INR,expense,food delivery,false
+2026-09-21,Zomato order,-42800,INR,expense,food delivery,false
+2026-09-21,Myntra refund,189900,INR,refund,shopping,false
+2026-09-22,Zomato order,-25700,INR,expense,food delivery,false
+2026-09-22,Namma Metro card recharge,-20700,INR,expense,transport,false
+2026-09-22,Third Wave Coffee,-27300,INR,expense,dining out,false
+2026-09-23,Nature's Basket,-131400,INR,expense,groceries,false
+2026-09-23,Swiggy order,-31400,INR,expense,food delivery,false
+2026-09-23,Uber ride,-22500,INR,expense,transport,false
+2026-09-23,Decathlon store,-444200,INR,expense,shopping,false
+2026-09-24,Zomato order,-64800,INR,expense,food delivery,false
+2026-09-24,Uber ride,-35800,INR,expense,transport,false
+2026-09-25,Zomato order,-43800,INR,expense,food delivery,false
+2026-09-25,Namma Metro card recharge,-33300,INR,expense,transport,false
+2026-09-26,Starbucks,-29800,INR,expense,dining out,false
+2026-09-26,Dinner at Toit,-305500,INR,expense,dining out,false
+2026-09-27,DMart supermarket,-231400,INR,expense,groceries,false
+2026-09-28,Swiggy order,-60600,INR,expense,food delivery,false
+2026-09-28,Uber ride,-40500,INR,expense,transport,false
+2026-09-29,Zomato order,-27800,INR,expense,food delivery,false
+2026-09-30,BigBasket groceries,-175200,INR,expense,groceries,false
+2026-10-01,Salary - Acme Technologies,8500000,INR,income,salary,true
+2026-10-01,Transfer to savings account,-1500000,INR,transfer,savings transfer,false
+2026-10-01,Uber ride,-40500,INR,expense,transport,false
+2026-10-02,Apartment rent,-2800000,INR,expense,housing,true
+2026-10-03,Lunch at Meghana Foods,-283000,INR,expense,dining out,false
+2026-10-04,DMart supermarket,-206900,INR,expense,groceries,false
+2026-10-04,Swiggy order,-39400,INR,expense,food delivery,false
+2026-10-04,Starbucks,-19000,INR,expense,dining out,false
+2026-10-04,Urban Company home cleaning,-149900,INR,expense,,false
+2026-10-05,Car loan EMI,-950000,INR,repayment,loan repayment,true
+2026-10-05,BESCOM electricity bill,-218700,INR,expense,utilities,true
+2026-10-05,Zomato order,-30500,INR,expense,food delivery,false
+2026-10-05,Namma Metro card recharge,-22500,INR,expense,transport,false
+2026-10-06,Uber ride,-26800,INR,expense,transport,false
+2026-10-06,Third Wave Coffee,-39200,INR,expense,dining out,false
+2026-10-07,Airtel postpaid,-59900,INR,expense,utilities,true
+2026-10-07,ACT Fibernet broadband,-104900,INR,expense,utilities,true
+2026-10-07,Nature's Basket,-132200,INR,expense,groceries,false
+2026-10-08,Namma Metro card recharge,-40400,INR,expense,transport,false
+2026-10-08,Chai Point,-24700,INR,expense,dining out,false
+2026-10-09,Swiggy order,-67800,INR,expense,food delivery,false
+2026-10-09,Namma Metro card recharge,-26900,INR,expense,transport,false
+2026-10-09,Indigo flight Bengaluru to Goa,-784000,INR,expense,travel,false
+2026-10-09,Goa homestay booking,-620000,INR,expense,travel,false
+2026-10-10,Netflix subscription,-64900,INR,expense,subscriptions,true
+2026-10-10,Cult.fit gym membership,-199900,INR,expense,health and fitness,true
+2026-10-10,Lunch at Meghana Foods,-193600,INR,expense,dining out,false
+2026-10-11,DMart supermarket,-230600,INR,expense,groceries,false
+2026-10-11,Third Wave Coffee,-20100,INR,expense,dining out,false
+2026-10-12,Spotify Premium,-11900,INR,expense,subscriptions,true
+2026-10-12,Amazon Prime Video,-29900,INR,expense,subscriptions,true
+2026-10-12,Zomato order,-56400,INR,expense,food delivery,false
+2026-10-13,Swiggy order,-26400,INR,expense,food delivery,false
+2026-10-13,Namma Metro card recharge,-21200,INR,expense,transport,false
+2026-10-14,DMart supermarket,-259200,INR,expense,groceries,false
+2026-10-14,Swiggy order,-28200,INR,expense,food delivery,false
+2026-10-14,Uber ride,-9500,INR,expense,transport,false
+2026-10-15,Swiggy order,-25800,INR,expense,food delivery,false
+2026-10-15,Uber ride,-36600,INR,expense,transport,false
+2026-10-15,Crossword bookstore,-72000,INR,expense,,false
+2026-10-16,Uber ride,-19800,INR,expense,transport,false
+2026-10-17,Dinner at Toit,-187300,INR,expense,dining out,false
+2026-10-18,DMart supermarket,-184800,INR,expense,groceries,false
+2026-10-18,Third Wave Coffee,-25600,INR,expense,dining out,false

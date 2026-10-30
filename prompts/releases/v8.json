@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "release_version": "v8",
+  "status": "draft",
+  "evaluation_status": "not_run",
+  "created_at": "2026-10-26T12:32:54.473Z",
+  "reason": "Risk review of chat explanations before they are shown in iteration 6",
+  "parent_release": "v7",
+  "parent_sha256": "7fff8f6112edc0225260374aac7d336a9709d008c09ea8443394e5bdf3fdb1f8",
+  "based_on_release": "v7",
+  "templates": {
+    "common": {
+      "version": "v1",
+      "path": "common/v1.md",
+      "sha256": "648298382cf648cf294880293d866258dd2fcdb3bfb6ce7eb18ad218d97cce7f"
+    },
+    "coordinator": {
+      "version": "v1",
+      "path": "coordinator/v1.md",
+      "sha256": "d07c0070809d639940446f2e0eac5f3f932d96a5b6a6b49a75de0d35a622314c"
+    },
+    "categorizer": {
+      "version": "v6",
+      "path": "categorizer/v6.md",
+      "sha256": "985d64d640441f0ae144a88fb11799ec887fc717d2f6ad2d69a5e0215d797a0d"
+    },
+    "investigator": {
+      "version": "v1",
+      "path": "investigator/v1.md",
+      "sha256": "553e27c5fbd4fdc5fb549b9dd9ee413a1259053ebbb94f62a168a7bf1e9c132a"
+    },
+    "analyzer": {
+      "version": "v1",
+      "path": "analyzer/v1.md",
+      "sha256": "e55bac2f2beb35758831e21d9b837c73e1937c1efa3368bd63d98fd21c87b212"
+    },
+    "forecaster": {
+      "version": "v2",
+      "path": "forecaster/v2.md",
+      "sha256": "4e98a9cdf63a2a0715bb2287ddc899c412edc61258520902a7bfb382c7a55ce6"
+    },
+    "advisor": {
+      "version": "v1",
+      "path": "advisor/v1.md",
+      "sha256": "87755a964f6ecbad91954d1c6e1414db0f22cd1300a73197d07610cd50659cc4"
+    },
+    "risk": {
+      "version": "v2",
+      "path": "risk/v2.md",
+      "sha256": "ce29fa98edca3233cde604f7b78b67d65250f35d5755aec3b845b7157b5c9951"
+    },
+    "goals": {
+      "version": "v1",
+      "path": "goals/v1.md",
+      "sha256": "c83dc80c4d4a1116e2a4059398f860f30b280ba5d368a1208dc1fa5644e73924"
+    }
+  }
+}

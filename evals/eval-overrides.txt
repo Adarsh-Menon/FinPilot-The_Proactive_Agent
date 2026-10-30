@@ -1,0 +1,2 @@
+# Eval environment only: deepeval 4.3.2 needs click<8.4 (the app pins 8.5.0 in its own .venv).
+click==8.3.3

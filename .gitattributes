@@ -1,0 +1,5 @@
+# Preserve exact bytes of checksum-pinned prompt source artifacts.
+prompts/*/v*.md -text
+prompts/releases/v*.json -text
+
+*.sh text eol=lf

@@ -1,0 +1,22 @@
+groups:
+  - name: finpilot
+    rules:
+      - alert: FinPilotApiDown
+        expr: up{job="finpilot-api"} == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "FinPilot API metrics endpoint is unreachable"}
+      - alert: FinPilotHighErrorRate
+        expr: sum(rate(finpilot_http_requests_total{status=~"5.."}[5m])) / clamp_min(sum(rate(finpilot_http_requests_total[5m])), 1e-9) > 0.05
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "More than 5% of API requests return 5xx"}
+      - alert: FinPilotMeshFailures
+        expr: sum(rate(finpilot_llm_requests_total{outcome!="completed"}[10m])) > 0
+        for: 10m
+        labels: {severity: warning}
+        annotations: {summary: "Mesh inference calls are failing or returning incomplete output"}
+      - alert: FinPilotLoginFailureSpike
+        expr: sum(increase(finpilot_auth_attempts_total{action="login",outcome=~"rejected|throttled"}[5m])) > 30
+        labels: {severity: warning}
+        annotations: {summary: "Unusual number of rejected or throttled sign-ins"}

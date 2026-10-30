@@ -1,0 +1,188 @@
+{
+ "suite": "goals_coach",
+ "cases": [
+  {
+   "suite": "goals_coach",
+   "case": "goal-001",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "How is my Goa trip goal going?",
+   "output": "You've already set aside \u20b925,000 for your Goa trip \u2014 that's 42% of your \u20b960,000 target. With 5 months to go, your current pace of \u20b98,799 per month is ahead of what's needed, so you're right on track. Keep it up, and you'll be ready for that getaway by 31 Mar 2027.",
+   "context": [
+    "Goal: Goa trip",
+    "Target: \u20b960,000",
+    "Saved: \u20b925,000",
+    "Target date: 2027-03-31",
+    "Still needed: \u20b935,000",
+    "Needed per month: \u20b96,496",
+    "Status: on_track",
+    "Current pace per month: \u20b98,799"
+   ],
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 1.0,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response successfully encourages the user with positive reinforcement ('Keep it up') without using pressure, blame, or promises of guaranteed outcomes, satisfying step 1. It is highly tailored to the specific Goa trip goal, citing exact figures like \u20b925,000 saved and a 42% completion rate, meeting step 2. However, since the user's progress is identified as 'ahead' rather than 'behind schedule,' the requirement in step 3 to suggest a realistic next step for a behind-schedule scenario is not applicable; the response correctly avoids unnecessary corrective advice while maintaining alignment with the user's current status.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "goals_coach",
+   "case": "goal-002",
+   "split": "dev",
+   "tags": [],
+   "passed": false,
+   "input": "How is my New laptop goal going?",
+   "output": "You've already set aside \u20b930,000 for your new laptop \u2014 that's 33% of your target. With 10 months to go, your current pace of \u20b98,799 each month is ahead of the \u20b95,762 needed, so you're right on track. Keep it up and you'll be ready by 31 Aug 2027.",
+   "context": [
+    "Goal: New laptop",
+    "Target: \u20b990,000",
+    "Saved: \u20b930,000",
+    "Target date: 2027-08-31",
+    "Still needed: \u20b960,000",
+    "Needed per month: \u20b95,761",
+    "Status: on_track",
+    "Current pace per month: \u20b98,799"
+   ],
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 0.0,
+     "threshold": 1.0,
+     "passed": false,
+     "reason": "amounts not in the facts: [5762]",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 0.8571428571428571,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 0.86 because the actual output contains a minor numerical discrepancy, claiming the required savings per month is \u20b95,762, whereas the retrieval context explicitly states it is \u20b95,761.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 0.9,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response successfully encourages the user by highlighting progress (33% saved) and confirming they are ahead of schedule, avoiding pressure or promises of rewards. It is specifically tailored to the user's goal of buying a laptop with exact figures (\u20b930,000 saved, \u20b95,762 monthly target). However, the third evaluation step requires suggesting a realistic next step when the goal is behind schedule; since the user is actually ahead of schedule, this specific condition is not triggered, but the response fails to provide a proactive next step (like increasing savings or maintaining the pace) that would be helpful regardless of the schedule status, making it slightly less comprehensive than a perfect 10.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "goals_coach",
+   "case": "goal-003",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "How is my Emergency fund goal going?",
+   "output": "You've set a big goal to build your emergency fund by 30 Apr 2027, and you're starting from zero \u2014 that's a brave first step. Right now, your monthly pace of \u20b98,799 is about a third of the \u20b923,536 you'd need each month to reach \u20b9150,000 on time. Consider breaking this into a smaller first milestone or adding any upcoming income to your plan to close the gap.",
+   "context": [
+    "Goal: Emergency fund",
+    "Target: \u20b9150,000",
+    "Saved: \u20b90",
+    "Target date: 2027-04-30",
+    "Still needed: \u20b9150,000",
+    "Needed per month: \u20b923,536",
+    "Status: stretch",
+    "Current pace per month: \u20b98,799"
+   ],
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 1.0,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 1.00 because there are no contradictions, indicating the actual output is perfectly faithful to the retrieval context.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response successfully encourages the user by calling their start 'brave' without using pressure, blame, or promises of specific outcomes. It is highly tailored to the user's specific goal, citing exact dates (30 Apr 2027), amounts (\u20b9150,000 target, \u20b98,799 current pace), and the calculated gap. Furthermore, it suggests realistic next steps for a behind-schedule goal: breaking the goal into smaller milestones or adding upcoming income.",
+     "judge": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "dataset_version": "goals-coach-goldens-v1",
+  "agent": "goals",
+  "about": "Fina's coaching note for one goal. The goal is created for the synthetic owner, then a note is requested; graded against the goal's calculated progress.",
+  "cases": [
+    {"id": "goal-001", "split": "dev", "goal": {"name": "Goa trip", "target_minor": 6000000, "target_date": "2027-03-31", "saved_minor": 2500000}},
+    {"id": "goal-002", "split": "dev", "goal": {"name": "New laptop", "target_minor": 9000000, "target_date": "2027-08-31", "saved_minor": 3000000}},
+    {"id": "goal-003", "split": "dev", "goal": {"name": "Emergency fund", "target_minor": 15000000, "target_date": "2027-04-30", "saved_minor": 0}},
+    {"id": "goal-004", "split": "holdout", "goal": {"name": "Bike", "target_minor": 12000000, "target_date": "2026-12-15", "saved_minor": 1000000}, "tags": ["stretch"]},
+    {"id": "goal-005", "split": "holdout", "goal": {"name": "Wedding gift", "target_minor": 1500000, "target_date": "2026-11-30", "saved_minor": 1400000}, "tags": ["nearly-done"]},
+    {"id": "goal-006", "split": "holdout", "goal": {"name": "House deposit", "target_minor": 300000000, "target_date": "2027-06-30", "saved_minor": 2000000}, "tags": ["off-track"]}
+  ]
+}

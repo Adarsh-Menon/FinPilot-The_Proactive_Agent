@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "release_version": "v13",
+  "status": "draft",
+  "evaluation_status": "not_run",
+  "created_at": "2026-10-26T17:19:32.339Z",
+  "reason": "Goal coaching notes and goal extraction in chat in iteration 10",
+  "parent_release": "v12",
+  "parent_sha256": "750ffc9766864aad3da0ac5dfb4ded177bbfec422ba15d82266b086051075246",
+  "based_on_release": "v12",
+  "templates": {
+    "common": {
+      "version": "v1",
+      "path": "common/v1.md",
+      "sha256": "648298382cf648cf294880293d866258dd2fcdb3bfb6ce7eb18ad218d97cce7f"
+    },
+    "coordinator": {
+      "version": "v3",
+      "path": "coordinator/v3.md",
+      "sha256": "a71785231aa077937ec2117f3864fd86c1e41213c24ec62a5ed13977ab6fe5e2"
+    },
+    "categorizer": {
+      "version": "v6",
+      "path": "categorizer/v6.md",
+      "sha256": "985d64d640441f0ae144a88fb11799ec887fc717d2f6ad2d69a5e0215d797a0d"
+    },
+    "investigator": {
+      "version": "v2",
+      "path": "investigator/v2.md",
+      "sha256": "d75774750b7c6dd3b8963a5cc2dd3d1866eac3950f6b7405bedcf8bd874b0e26"
+    },
+    "analyzer": {
+      "version": "v1",
+      "path": "analyzer/v1.md",
+      "sha256": "e55bac2f2beb35758831e21d9b837c73e1937c1efa3368bd63d98fd21c87b212"
+    },
+    "forecaster": {
+      "version": "v4",
+      "path": "forecaster/v4.md",
+      "sha256": "eab9e936e987b2d92ccbe840e7b5debeb6fe34d4c006b97b89445295f4059de5"
+    },
+    "advisor": {
+      "version": "v1",
+      "path": "advisor/v1.md",
+      "sha256": "87755a964f6ecbad91954d1c6e1414db0f22cd1300a73197d07610cd50659cc4"
+    },
+    "risk": {
+      "version": "v2",
+      "path": "risk/v2.md",
+      "sha256": "ce29fa98edca3233cde604f7b78b67d65250f35d5755aec3b845b7157b5c9951"
+    },
+    "goals": {
+      "version": "v2",
+      "path": "goals/v2.md",
+      "sha256": "0aa4ddc25cacc69001d8ed03ccf90e98a947e504bedae0b0502b92ca785650d8"
+    }
+  }
+}

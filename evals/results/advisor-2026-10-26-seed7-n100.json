@@ -1,0 +1,60 @@
+{
+  "status": "completed",
+  "evaluated": "advisor + risk review",
+  "git_commit": null,
+  "dataset_version": "advisor-synthetic-v1",
+  "dataset_sha256": "d63242f71686fd3b344cd94e2ed247ce535f3a2a141f48d770a79c7445ede117",
+  "split": "synthetic-generated",
+  "seed": 7,
+  "model_id": "deepseek/deepseek-v4-flash",
+  "risk_model_id": "qwen/qwen3.5-122b-a10b",
+  "prompt_manifest": "v16",
+  "environment": "local development",
+  "sample_count": 100,
+  "elapsed_seconds": 2263,
+  "metrics": {
+    "cases": 100,
+    "with_options": 100,
+    "model_grounded": 98,
+    "risk_approved": 92,
+    "shown_ai": 92,
+    "shown_calculated": 8,
+    "model_errors": 3,
+    "fully_grounded_rate": 1.0,
+    "critical_failures": 0,
+    "model_grounding_rate": 0.98,
+    "risk_approval_rate_of_grounded": 0.9388,
+    "ai_shown_rate": 0.92,
+    "latency_p50_s": 20.5,
+    "latency_p95_s": 39.8
+  },
+  "gate": {
+    "rule": ">= 98% fully grounded shown answers and zero critical failures across >= 100 cases",
+    "passed": true,
+    "sample_meets_minimum": true
+  },
+  "failures": [
+    {
+      "case_id": 22,
+      "stage": "model",
+      "error": "APIConnectionError"
+    },
+    {
+      "case_id": 23,
+      "stage": "model",
+      "error": "APIConnectionError"
+    },
+    {
+      "case_id": 27,
+      "stage": "model",
+      "error": "ValidationError"
+    }
+  ],
+  "limitations": [
+    "Synthetic personas from one generator; not real-world accuracy.",
+    "Independent audit checks numbers, dates, essentials and verdict phrases; it does not judge usefulness or tone.",
+    "Single run; model outputs vary between runs.",
+    "Golden labels are not used: the check is grounding, not a gold answer.",
+    "No git commit recorded: the FinPilot folder is not tracked by its own repository; the code is identified by prompt release v16 and the date."
+  ]
+}

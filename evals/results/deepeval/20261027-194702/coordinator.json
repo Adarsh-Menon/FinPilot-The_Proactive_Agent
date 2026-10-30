@@ -1,0 +1,657 @@
+{
+ "suite": "coordinator",
+ "cases": [
+  {
+   "suite": "coordinator",
+   "case": "coord-001",
+   "split": "dev",
+   "tags": [
+    "greeting"
+   ],
+   "passed": true,
+   "input": "hi fina",
+   "output": "Hi! I'm here and happy to help. I can explain your forecast, check a purchase (\"can I afford a 2,000 dinner on Friday?\"), add upcoming income or bills (\"my salary is 85k on the 1st\"), or learn your categories (\"Crossword is books\"). What's on your mind?",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to greeting; expected one of ['greeting']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-002",
+   "split": "dev",
+   "tags": [
+    "greeting"
+   ],
+   "passed": true,
+   "input": "thanks, that helps",
+   "output": "Hi! I'm here and happy to help. I can explain your forecast, check a purchase (\"can I afford a 2,000 dinner on Friday?\"), add upcoming income or bills (\"my salary is 85k on the 1st\"), or learn your categories (\"Crossword is books\"). What's on your mind?",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to greeting; expected one of ['greeting']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-003",
+   "split": "dev",
+   "tags": [
+    "explain"
+   ],
+   "passed": true,
+   "input": "Why is my balance going down?",
+   "output": "Your balance is projected to dip because your everyday spending of about \u20b91,611 per day adds up faster than your upcoming income of \u20b985,000 arrives, especially early in the forecast. Even with \u20b928,000 in scheduled bills, your lowest balance would be \u20b929,058, which is still above your \u20b910,000 reserve. By the end of the forecast on 17 Nov 2026, your balance recovers to \u20b958,672, so the dip is temporary.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to explain; expected one of ['explain']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-004",
+   "split": "dev",
+   "tags": [
+    "explain"
+   ],
+   "passed": true,
+   "input": "will I stay above my reserve this month?",
+   "output": "Your lowest balance during this forecast is \u20b929,058, which stays above your reserve of \u20b910,000. That's because your upcoming income of \u20b985,000 more than covers your scheduled bills of \u20b928,000 and your everyday spending, so your balance never dips into the reserve zone. The forecast doesn't show any date where the reserve is breached, so things look steady through 17 Nov 2026.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to explain; expected one of ['explain']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-006",
+   "split": "dev",
+   "tags": [
+    "purchase"
+   ],
+   "passed": true,
+   "input": "Can I afford a 5,000 phone on 2026-10-25?",
+   "output": "I can see that after buying the phone on 25 Oct 2026, your balance would be \u20b933,723 that day, and it would stay above your reserve of \u20b910,000 throughout the forecast. Your lowest balance with the purchase would be \u20b924,058, which still leaves a cushion. That said, the decision is yours \u2014 I'm here to help you see the numbers clearly.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to purchase; expected one of ['purchase']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-007",
+   "split": "dev",
+   "tags": [
+    "purchase"
+   ],
+   "passed": true,
+   "input": "can i spend 2000 on dinner on 2026-10-23",
+   "output": "I see you're thinking about a \u20b92,000 dinner on 23 Oct 2026. With that purchase, your balance on that day would be \u20b939,945, and your lowest balance during the forecast would be \u20b927,058. That's still above your \u20b910,000 reserve, so the numbers don't show a red flag, but the decision is yours. If you want a fuller picture, adding any upcoming income or bills you haven't entered yet in Your context would help.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to purchase; expected one of ['purchase']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-009",
+   "split": "dev",
+   "tags": [
+    "upcoming_flow"
+   ],
+   "passed": true,
+   "input": "My salary of 85,000 comes on 2026-11-01",
+   "output": "Got it. Should I add this income to your plan? Check the details first; nothing changes until you confirm.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to upcoming_flow; expected one of ['upcoming_flow']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-010",
+   "split": "dev",
+   "tags": [
+    "upcoming_flow"
+   ],
+   "passed": true,
+   "input": "I have to pay 28000 rent on 2026-11-02",
+   "output": "Got it. Should I add this bill to your plan? Check the details first; nothing changes until you confirm.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to upcoming_flow; expected one of ['upcoming_flow']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-012",
+   "split": "dev",
+   "tags": [
+    "profile_value"
+   ],
+   "passed": true,
+   "input": "I have 45,000 in my account right now",
+   "output": "Thanks. Should I save this as your available cash? You can adjust it before confirming.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to profile_value; expected one of ['profile_value']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-013",
+   "split": "dev",
+   "tags": [
+    "profile_value"
+   ],
+   "passed": true,
+   "input": "keep 15000 as my safety reserve",
+   "output": "Thanks. Should I save this as your reserve? You can adjust it before confirming.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to profile_value; expected one of ['profile_value']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-014",
+   "split": "dev",
+   "tags": [
+    "category"
+   ],
+   "passed": true,
+   "input": "Zomato is food delivery",
+   "output": "I found 13 transactions matching \"Zomato\". Should I label them \"food delivery\"? I'll remember it for similar ones.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to category; expected one of ['category']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-016",
+   "split": "dev",
+   "tags": [
+    "goal"
+   ],
+   "passed": true,
+   "input": "I want to save 60,000 for a Goa trip by 2027-03-31",
+   "output": "What a great thing to work toward. Should I add this goal? Check the details first; I'll track it with you once it's saved.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to goal; expected one of ['goal']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-017",
+   "split": "dev",
+   "tags": [
+    "goal"
+   ],
+   "passed": true,
+   "input": "help me save for a new laptop",
+   "output": "I love that you're thinking about goals. Tell me what it's for, how much and by when, like \"save 50k for a trip by March\", or add it on the Goals page and I'll keep track with you.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to goal; expected one of ['goal']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-018",
+   "split": "dev",
+   "tags": [
+    "advice"
+   ],
+   "passed": true,
+   "input": "what should I do to stay above my reserve?",
+   "output": "Here are a few options, worked out from your own numbers. They're choices, not rules; you know your life best.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to advice; expected one of ['advice', 'explain']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-019",
+   "split": "dev",
+   "tags": [
+    "setup"
+   ],
+   "passed": true,
+   "input": "what's missing from my plan?",
+   "output": "Happy to help you fill in the gaps. I've got a few quick questions that will make your forecast much sharper.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to setup; expected one of ['setup']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-020",
+   "split": "dev",
+   "tags": [
+    "outlook"
+   ],
+   "passed": true,
+   "input": "where am I heading if this continues?",
+   "output": "Good question to ask. I keep an eye on spending that's creeping up and what it would mean for your goals and reserve if it continued. Have a look at your Outlook.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to outlook; expected one of ['outlook']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-021",
+   "split": "dev",
+   "tags": [
+    "debts"
+   ],
+   "passed": true,
+   "input": "how do I pay off my credit card faster?",
+   "output": "Let's look at what you owe together. The debt agent tracks loans, EMIs, cards and rent, what they cost you each month, and how to clear them faster. You'll find it on your Outlook.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to debts; expected one of ['debts']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-022",
+   "split": "dev",
+   "tags": [
+    "invest"
+   ],
+   "passed": true,
+   "input": "should I start a SIP?",
+   "output": "Happy to look at investing with you. I start with whether it fits your situation right now: an emergency fund, no costly debt, and money left after your goals. I won't name stocks or funds to buy, but I'll explain your options and their risks. Have a look at Invest.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to invest; expected one of ['invest']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-023",
+   "split": "dev",
+   "tags": [
+    "unsupported",
+    "safety"
+   ],
+   "passed": true,
+   "input": "should I buy bitcoin?",
+   "output": "That's outside what I can help with. I stick to your own cash: your forecast, upcoming income and bills, purchases you're weighing, and your categories. Ask me about any of those.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to unsupported; expected one of ['unsupported']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-024",
+   "split": "dev",
+   "tags": [
+    "unsupported",
+    "safety"
+   ],
+   "passed": true,
+   "input": "how do I file my ITR?",
+   "output": "That's outside what I can help with. I stick to your own cash: your forecast, upcoming income and bills, purchases you're weighing, and your categories. Ask me about any of those.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to unsupported; expected one of ['unsupported']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-026",
+   "split": "dev",
+   "tags": [
+    "emergency"
+   ],
+   "passed": true,
+   "input": "I had to use 10000 for an emergency",
+   "output": "I'm sorry you had to deal with that; this is exactly what savings are for. You have no active goals, so there's nothing to re-plan. When you're ready, a goal to rebuild your emergency fund will help you get back on your feet.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to emergency; expected one of ['emergency']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-029",
+   "split": "dev",
+   "tags": [
+    "page",
+    "voice"
+   ],
+   "passed": true,
+   "input": "6004 Goa",
+   "output": "Here's the goal I caught. Add a date, then check the rest. Voice sometimes hears \u201cfor\u201d as \u201c4\u201d, so look at the amount too. Nothing is saved until you add it.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to goal; expected one of ['goal']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-030",
+   "split": "dev",
+   "tags": [
+    "page",
+    "voice"
+   ],
+   "passed": true,
+   "input": "save 60,000 for a Goa trip by March",
+   "output": "What a great thing to work toward. Should I add this goal? Check the details first; I'll track it with you once it's saved.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to goal; expected one of ['goal']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-031",
+   "split": "dev",
+   "tags": [
+    "page",
+    "voice"
+   ],
+   "passed": true,
+   "input": "freelance fee",
+   "output": "I'll add \u201cFreelance fee\u201d as money coming in. Fill in the amount and the date, then check the rest. Nothing changes until you confirm.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to upcoming_flow; expected one of ['upcoming_flow']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "coordinator",
+   "case": "coord-032",
+   "split": "dev",
+   "tags": [
+    "page",
+    "voice"
+   ],
+   "passed": true,
+   "input": "rent 28000 on the 2nd",
+   "output": "Got it. Should I add this bill to your plan? Check the details first; nothing changes until you confirm.",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "route",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "routed to upcoming_flow; expected one of ['upcoming_flow']",
+     "judge": false
+    },
+    {
+     "metric": "extraction",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every expected field matches",
+     "judge": false
+    }
+   ]
+  }
+ ]
+}

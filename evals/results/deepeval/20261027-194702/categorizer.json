@@ -1,0 +1,627 @@
+{
+ "suite": "categorizer",
+ "cases": [
+  {
+   "suite": "categorizer",
+   "case": "cat-001",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "UPI/DR/412345678901/SWIGGY/YESB/swiggy@ybl/Payment",
+   "output": "food delivery",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'food delivery'; acceptable ['food delivery', 'food', 'dining']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-002",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "UPI/DR/512345678901/Zomato Ltd/HDFC/zomato@hdfcbank/Food",
+   "output": "food delivery",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'food delivery'; acceptable ['food delivery', 'food', 'dining']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-003",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "POS 4521XXXXXXXX8812 DMART AVENUE BLR",
+   "output": "groceries",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'groceries'; acceptable ['groceries', 'grocery', 'supermarket']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-004",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "BIGBASKET.COM",
+   "output": "groceries",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'groceries'; acceptable ['groceries', 'grocery']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-005",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Blinkit order",
+   "output": "groceries",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'groceries'; acceptable ['groceries', 'grocery', 'quick commerce']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-006",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "UBER *TRIP HELP.UBER.COM",
+   "output": "transport",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'transport'; acceptable ['transport', 'travel', 'cab', 'taxi', 'ride hailing']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-007",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "NAMMA METRO SMART CARD TOPUP",
+   "output": "transport",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'transport'; acceptable ['transport', 'travel', 'public transport', 'metro']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-009",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "HP PETROL PUMP KORAMANGALA",
+   "output": "transport",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'transport'; acceptable ['fuel', 'transport', 'petrol', 'vehicle']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-010",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Third Wave Coffee",
+   "output": "dining",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'dining'; acceptable ['dining out', 'cafe', 'coffee', 'food', 'dining', 'eating out']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-011",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "STARBUCKS COFFEE BLR",
+   "output": "dining",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'dining'; acceptable ['dining out', 'cafe', 'coffee', 'food', 'dining', 'eating out']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-012",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "NETFLIX.COM SI",
+   "output": "entertainment",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'entertainment'; acceptable ['subscriptions', 'subscription', 'entertainment', 'streaming']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-013",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "SPOTIFY INDIA",
+   "output": "entertainment",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'entertainment'; acceptable ['subscriptions', 'subscription', 'entertainment', 'music', 'streaming']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-014",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "ACT FIBERNET",
+   "output": "utilities",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'utilities'; acceptable ['utilities', 'internet', 'broadband', 'bills']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-015",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "BESCOM ELECTRICITY BILL",
+   "output": "utilities",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'utilities'; acceptable ['utilities', 'electricity', 'bills']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-016",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Apollo Pharmacy",
+   "output": "health",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'health'; acceptable ['health', 'healthcare', 'medical', 'pharmacy', 'medicines']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-018",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "CROMA ELECTRONICS - LAPTOP",
+   "output": "electronics",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'electronics'; acceptable ['electronics', 'shopping', 'gadgets']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-019",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "UPI/DR/567661781702/AMAZON PAY INDIA/UTIB/amazon@apl/Order",
+   "output": "shopping",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'shopping'; acceptable ['shopping', 'online shopping']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-020",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "MAKEMYTRIP FLIGHT BLR-GOI",
+   "output": "travel",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'travel'; acceptable ['travel', 'flights', 'air travel', 'transport']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-021",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Apartment rent",
+   "output": "rent",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'rent'; acceptable ['housing', 'rent']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-023",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Crossword bookstore",
+   "output": "books",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'books'; acceptable ['books', 'shopping', 'education', 'entertainment']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-024",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "ATM WDL 0912 MG ROAD BLR",
+   "output": "cash withdrawal",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'cash withdrawal'; acceptable ['cash', 'cash withdrawal', 'atm']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-025",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "NEFT CR-ACME TECHNOLOGIES PVT LTD-SALARY NOV 2026",
+   "output": "salary",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'salary'; acceptable ['salary', 'income']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-026",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "NEFT CR-UPWORK ESCROW INC-FREELANCE",
+   "output": "freelance income",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'freelance income'; acceptable ['freelance', 'income', 'freelance income', 'side income']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-027",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Int.Pd:01-08-2026 to 31-10-2026",
+   "output": "interest",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'interest'; acceptable ['interest', 'interest income', 'income']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-028",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "PAYTM CASHBACK",
+   "output": "cashback",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'cashback'; acceptable ['cashback', 'rewards', 'income']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-029",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "AMZN Mktp IN*Refund",
+   "output": "refund",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'refund'; acceptable ['refund', 'refunds', 'shopping']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-030",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "Transfer to savings account",
+   "output": "transfer",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'transfer'; acceptable ['savings', 'savings transfer', 'transfer']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-031",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "SIP - PARAG PARIKH FLEXI CAP (MUTUAL FUND)",
+   "output": "investment",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'investment'; acceptable ['investment', 'investments', 'mutual fund', 'sip', 'savings']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-033",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "ACH D- BAJAJ FINANCE LTD-EMI 50731",
+   "output": "loan repayment",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'loan repayment'; acceptable ['loan', 'emi', 'loan repayment', 'debt repayment']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "cat-034",
+   "split": "dev",
+   "tags": [],
+   "passed": true,
+   "input": "CRED CLUB - CC BILL PAYMENT HDFC XX9921",
+   "output": "credit card payment",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "acceptable label",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "labelled 'credit card payment'; acceptable ['credit card', 'credit card payment', 'credit card bill', 'debt repayment', 'bills']",
+     "judge": false
+    }
+   ]
+  },
+  {
+   "suite": "categorizer",
+   "case": "accuracy-gate",
+   "split": "all",
+   "tags": [
+    "gate"
+   ],
+   "passed": true,
+   "input": "30 categorizer cases",
+   "output": "accuracy 100.00%",
+   "context": [],
+   "metrics": [
+    {
+     "metric": "accuracy gate",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "accuracy 100.00%; gate 85%",
+     "judge": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,317 @@
+{
+ "suite": "goals_coach",
+ "cases": [
+  {
+   "suite": "goals_coach",
+   "case": "goal-001",
+   "split": "dev",
+   "tags": [],
+   "passed": false,
+   "input": "How is my Goa trip goal going?",
+   "output": "You've already set aside \u20b925,000 for your Goa trip \u2014 that's 42% of your target. With 5 months to go, your current pace of \u20b98,799 per month is ahead of the \u20b96,496 needed, so you're right on track. Keep it up, and you'll be all set for that trip!",
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 0.7142857142857143,
+     "threshold": 0.8,
+     "passed": false,
+     "reason": "The score is 0.71 because the actual output contains two mathematical inaccuracies: it incorrectly rounds \u20b925,000 as exactly 42% of the \u20b960,000 target (when it is actually ~41.67%), and it states there are exactly 5 months remaining, whereas the calculation of the remaining \u20b935,000 divided by the required monthly saving of \u20b96,496 yields approximately 5.4 months.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 1.0,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response successfully encourages the user by highlighting progress (42% saved) without using pressure, blame, or promises of guaranteed outcomes. It is specifically tailored to the user's Goa trip goal with exact figures (\u20b925,000, \u20b98,799/month). However, it fails the third criterion because the goal is identified as being ahead of schedule, not behind, so no realistic next step for a delayed scenario was suggested or needed.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "goals_coach",
+   "case": "goal-002",
+   "split": "dev",
+   "tags": [],
+   "passed": false,
+   "input": "How is my New laptop goal going?",
+   "output": "You've already set aside \u20b930,000 of your \u20b990,000 goal for a new laptop \u2014 that's 33% of the way there. With 10 months left and your current pace of \u20b98,799 per month, you're on track to reach it comfortably by 31 Aug 2027. Keep it up!",
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 1.0,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 1.00 because there are no contradictions, indicating the actual output is perfectly faithful to the retrieval context.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 0.6,
+     "threshold": 0.7,
+     "passed": false,
+     "reason": "The response successfully encourages the user with a positive tone and avoids pressure, blame, or unrealistic promises. It is specifically tailored to the user's goal of saving for a laptop, citing exact figures (\u20b930,000 saved, \u20b990,000 goal) and the specific deadline. However, it fails the third criterion because the user's progress is actually behind schedule (projected completion in 2027 vs. implied earlier need), yet the model incorrectly states they are 'on track' and does not suggest a realistic next step to accelerate savings.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "goals_coach",
+   "case": "goal-003",
+   "split": "dev",
+   "tags": [],
+   "passed": false,
+   "input": "How is my Emergency fund goal going?",
+   "output": "You've set a big goal to build your \u20b9150,000 emergency fund by 30 Apr 2027, and you haven't set anything aside yet. With 6 months left, you'd need to save about \u20b923,536 each month, but your current pace is only \u20b98,799. That's a stretch, but even a smaller first milestone could help you build momentum.",
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 0.8,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 0.80 because the actual output incorrectly claims the user needs to save \u20b923,536 per month 'in 6 months', whereas the retrieval context provides this monthly amount without specifying a 6-month duration, implying a different timeline (likely ~17 months) that conflicts with the unsupported assumption in the output.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 0.6,
+     "threshold": 0.7,
+     "passed": false,
+     "reason": "The response tailors content to the user's specific goal (\u20b9150,000 by Apr 2027) and identifies realistic next steps like setting a smaller milestone. However, it fails the first evaluation step because stating 'you haven't set anything aside yet' introduces blame, and describing the required pace as a 'stretch' creates pressure rather than pure encouragement.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "goals_coach",
+   "case": "goal-004",
+   "split": "holdout",
+   "tags": [
+    "stretch"
+   ],
+   "passed": false,
+   "input": "How is my Bike goal going?",
+   "output": "You've set aside \u20b910,000 for your Bike goal, which is 8% of your target. With only 1 month left, your current pace of \u20b98,799 per month is a stretch to reach the \u20b9110,000 still needed. Consider adjusting the timeline or breaking it into smaller milestones to keep the momentum going.",
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 0.8571428571428571,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 0.86 because the actual output incorrectly implies only one month remains until the target date of 2026-12-15 without a specified current date, and it suggests feasibility despite the math showing that reaching the goal with a current pace of \u20b98,799 versus a required \u20b957,731 per month is impossible in that timeframe.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 0.4,
+     "threshold": 0.7,
+     "passed": false,
+     "reason": "The response fails the first evaluation step because it uses pressure-inducing language like 'a stretch' to describe the user's pace, rather than offering encouragement without blame or stress. While it correctly tailors content to the specific bike goal and suggests realistic next steps (adjusting timeline or breaking milestones), the negative framing regarding the difficulty of the goal violates the core requirement to avoid pressure.",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "goals_coach",
+   "case": "goal-005",
+   "split": "holdout",
+   "tags": [
+    "nearly-done"
+   ],
+   "passed": false,
+   "input": "How is my Wedding gift goal going?",
+   "output": "You've already set aside \u20b914,000 of your \u20b915,000 goal \u2014 that's 93% percent! With just 1 month to go and your current pace of \u20b98,799 each month, you're in great shape to reach the finish line.",
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 0.0,
+     "threshold": 1.0,
+     "passed": false,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 0.8,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 0.80 because the actual output incorrectly states that \u20b914,000 of a \u20b915,000 goal is exactly 93%, whereas the retrieval context implies the precise calculation is approximately 93.33% (14,000/15,000), making the specific percentage an inaccurate approximation.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 0.6,
+     "threshold": 0.7,
+     "passed": false,
+     "reason": "The response successfully encourages the user by highlighting progress (93% achieved) without using pressure, blame, or promises of guaranteed outcomes, satisfying step 1. It is specifically tailored to the user's goal of saving \u20b915,000 and their current pace, meeting step 2. However, it fails step 3 because, despite the goal being behind schedule (requiring \u20b91,000 in one month but having a pace of \u20b98,799/month which implies a calculation error or misinterpretation of 'behind schedule' in the prompt context, or simply that the user is actually ahead), the model incorrectly states the user is 'in great shape' and does not suggest a realistic next step for a scenario identified as behind schedule. Furthermore, the math implies the user is actually far ahead (saving ~8k/month vs needing 1k), ",
+     "judge": true
+    }
+   ]
+  },
+  {
+   "suite": "goals_coach",
+   "case": "goal-006",
+   "split": "holdout",
+   "tags": [
+    "off-track"
+   ],
+   "passed": true,
+   "input": "How is my House deposit goal going?",
+   "output": "You've set aside \u20b920,000 toward your \u20b93,000,000 house deposit, which is 1% of the way there. With 8 months left, you'd need to save \u20b9355,730 each month, but your current pace is \u20b98,799. That's a stretch, so consider a later target date or a smaller first milestone to keep the momentum going.",
+   "metrics": [
+    {
+     "metric": "names the goal",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "mentions the goal by name",
+     "judge": false
+    },
+    {
+     "metric": "amounts grounded",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "every amount is a provided fact",
+     "judge": false
+    },
+    {
+     "metric": "no guarantees",
+     "score": 1.0,
+     "threshold": 1.0,
+     "passed": true,
+     "reason": "no guarantees",
+     "judge": false
+    },
+    {
+     "metric": "Faithfulness",
+     "score": 0.8571428571428571,
+     "threshold": 0.8,
+     "passed": true,
+     "reason": "The score is 0.86 because the actual output incorrectly claims that \u20b920,000 represents 1% of the way to \u20b93,000,000, whereas 1% of \u20b93,000,000 is actually \u20b930,000, making the true percentage approximately 0.67%.",
+     "judge": true
+    },
+    {
+     "metric": "encouraging, not judgemental [GEval]",
+     "score": 0.7,
+     "threshold": 0.7,
+     "passed": true,
+     "reason": "The response tailors the content to the user's specific goal by citing exact figures (\u20b920,000 saved, \u20b93,000,000 target) and calculates the gap accurately. It suggests a realistic next step for an off-schedule goal by proposing a later date or smaller milestone. However, it fails the first criterion as the phrase 'That's a stretch' introduces pressure and highlights the difficulty negatively rather than offering pure encouragement without blame or stress.",
+     "judge": true
+    }
+   ]
+  }
+ ]
+}

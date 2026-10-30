@@ -1,0 +1,5 @@
+# Optional: the time-series foundation model behind the hybrid forecaster (CPU). Without it, forecasts use the
+# trailing-mean baseline. Install with:
+#   uv pip install -r requirements-forecast.txt --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match
+chronos-forecasting==2.3.2
+torch==2.14.1

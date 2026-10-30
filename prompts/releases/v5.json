@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "release_version": "v5",
+  "status": "draft",
+  "evaluation_status": "not_run",
+  "created_at": "2026-10-26T11:35:41.765Z",
+  "reason": "Name spending purpose rather than shop type in categories in iteration 5",
+  "parent_release": "v4",
+  "parent_sha256": "83c32cfbc136ba15b3a2e7c998d843e9e8b5ff6c7205ebb0ab3a8f797be78022",
+  "based_on_release": "v4",
+  "templates": {
+    "common": {
+      "version": "v1",
+      "path": "common/v1.md",
+      "sha256": "648298382cf648cf294880293d866258dd2fcdb3bfb6ce7eb18ad218d97cce7f"
+    },
+    "coordinator": {
+      "version": "v1",
+      "path": "coordinator/v1.md",
+      "sha256": "d07c0070809d639940446f2e0eac5f3f932d96a5b6a6b49a75de0d35a622314c"
+    },
+    "categorizer": {
+      "version": "v5",
+      "path": "categorizer/v5.md",
+      "sha256": "6339d1c5e641929849bc7902a5ca295e0ad49195fe54fbaa90bcc5a7251efef5"
+    },
+    "investigator": {
+      "version": "v1",
+      "path": "investigator/v1.md",
+      "sha256": "553e27c5fbd4fdc5fb549b9dd9ee413a1259053ebbb94f62a168a7bf1e9c132a"
+    },
+    "analyzer": {
+      "version": "v1",
+      "path": "analyzer/v1.md",
+      "sha256": "e55bac2f2beb35758831e21d9b837c73e1937c1efa3368bd63d98fd21c87b212"
+    },
+    "forecaster": {
+      "version": "v1",
+      "path": "forecaster/v1.md",
+      "sha256": "4e215132d10bb754818145e2f5686713ed170b230576bd9a39d0448efad0fba2"
+    },
+    "advisor": {
+      "version": "v1",
+      "path": "advisor/v1.md",
+      "sha256": "87755a964f6ecbad91954d1c6e1414db0f22cd1300a73197d07610cd50659cc4"
+    },
+    "risk": {
+      "version": "v1",
+      "path": "risk/v1.md",
+      "sha256": "065a5a69ec1ee1bfbe25f2e63387dbac12774e14a474cbd4714e1d5f4508609d"
+    },
+    "goals": {
+      "version": "v1",
+      "path": "goals/v1.md",
+      "sha256": "c83dc80c4d4a1116e2a4059398f860f30b280ba5d368a1208dc1fa5644e73924"
+    }
+  }
+}

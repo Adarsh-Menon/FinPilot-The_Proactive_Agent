@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "release_version": "v12",
+  "status": "draft",
+  "evaluation_status": "not_run",
+  "created_at": "2026-10-26T17:00:48.040Z",
+  "reason": "Coordinator routes Fina chat messages and extracts owner-stated details in iteration 9",
+  "parent_release": "v11",
+  "parent_sha256": "b549f897b89ea1cc4c754f0db56e90f51ffad1be655e10563d30678711efe38e",
+  "based_on_release": "v11",
+  "templates": {
+    "common": {
+      "version": "v1",
+      "path": "common/v1.md",
+      "sha256": "648298382cf648cf294880293d866258dd2fcdb3bfb6ce7eb18ad218d97cce7f"
+    },
+    "coordinator": {
+      "version": "v2",
+      "path": "coordinator/v2.md",
+      "sha256": "3545794fb84e1d316fc964f51969686c752e8a1d8230e1a5747fc0fd653e3f7b"
+    },
+    "categorizer": {
+      "version": "v6",
+      "path": "categorizer/v6.md",
+      "sha256": "985d64d640441f0ae144a88fb11799ec887fc717d2f6ad2d69a5e0215d797a0d"
+    },
+    "investigator": {
+      "version": "v2",
+      "path": "investigator/v2.md",
+      "sha256": "d75774750b7c6dd3b8963a5cc2dd3d1866eac3950f6b7405bedcf8bd874b0e26"
+    },
+    "analyzer": {
+      "version": "v1",
+      "path": "analyzer/v1.md",
+      "sha256": "e55bac2f2beb35758831e21d9b837c73e1937c1efa3368bd63d98fd21c87b212"
+    },
+    "forecaster": {
+      "version": "v4",
+      "path": "forecaster/v4.md",
+      "sha256": "eab9e936e987b2d92ccbe840e7b5debeb6fe34d4c006b97b89445295f4059de5"
+    },
+    "advisor": {
+      "version": "v1",
+      "path": "advisor/v1.md",
+      "sha256": "87755a964f6ecbad91954d1c6e1414db0f22cd1300a73197d07610cd50659cc4"
+    },
+    "risk": {
+      "version": "v2",
+      "path": "risk/v2.md",
+      "sha256": "ce29fa98edca3233cde604f7b78b67d65250f35d5755aec3b845b7157b5c9951"
+    },
+    "goals": {
+      "version": "v1",
+      "path": "goals/v1.md",
+      "sha256": "c83dc80c4d4a1116e2a4059398f860f30b280ba5d368a1208dc1fa5644e73924"
+    }
+  }
+}
