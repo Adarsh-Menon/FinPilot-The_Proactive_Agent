@@ -24,14 +24,14 @@ FinPilot combines deterministic financial accounting, hybrid time-series forecas
 ## Demo & Concept Video
 
 <p align="center">
-  <video src="resources/FinPilot_concept_60s_VO.mp4" controls="controls" width="100%" style="max-height: 500px;">
-    Your browser does not support the video tag.
-  </video>
+  <a href="https://github.com/Adarsh-Menon/FinPilot-The_Proactive_Agent/blob/main/resources/FinPilot_concept_60s_VO.mp4">
+    <img src="resources/demo-preview.gif" alt="FinPilot 60s Demo Walkthrough" width="720"/>
+  </a>
 </p>
 
-> 🎬 **Watch the 60-second walkthrough:** [FinPilot Concept Video (MP4)](resources/FinPilot_concept_60s_VO.mp4)
-
----
+<p align="center">
+  🎬 <strong>Click the animation above or <a href="https://github.com/Adarsh-Menon/FinPilot-The_Proactive_Agent/blob/main/resources/FinPilot_concept_60s_VO.mp4">open the full 60-second video walkthrough (MP4 with voiceover)</a></strong>
+</p>
 
 ---
 
